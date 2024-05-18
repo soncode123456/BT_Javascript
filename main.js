@@ -7,7 +7,7 @@ document.getElementById('btnTinhLuong').onclick = function() {
     console.log('tôi là nút tính lương');
     // input: luong1Ngay: number, soNgayLam: number
     let luong1Ngay = 100000;
-    let soNgayLam = document.getElementById('soNgayLam').value * 1;
+    let soNgayLam = +document.getElementById('soNgayLam').value * 1;
     console.log(soNgayLam);
 
     //Output: tongLuong: number
@@ -94,8 +94,8 @@ document.getElementById('btnQuyDoi').onclick = function () {
 //DIÊN TÍCH VÀ CHU VI
 document.getElementById('btnDienTich').onclick = function () {
     //input: Lấy giá trị từ ô nhập liệu (number)
-    let chieuDai = document.getElementById('chieuDai').value * 1;
-    let chieuRong = document.getElementById('chieuRong').value * 1;
+    let chieuDai = +document.getElementById('chieuDai').value * 1;
+    let chieuRong = +document.getElementById('chieuRong').value * 1;
     // console.log(chieuDai);
     // console.log(chieuRong);
 
@@ -132,7 +132,7 @@ document.getElementById('btnDienTich').onclick = function () {
 document.getElementById('btnTinh').onclick = function () {
     //input: Lấy giá trị từ ô nhập liệu (number)
     // let so = 0;
-    let so = document.getElementById('so').value * 1;
+    let so = +document.getElementById('so').value * 1;
 
     let so_hang_dv = Math.floor(so % 10);
     let so_hang_chuc = Math.floor(so / 10);
@@ -140,10 +140,10 @@ document.getElementById('btnTinh').onclick = function () {
     console.log(so_hang_dv);
     console.log(so_hang_chuc);
 
-    //Output
+    //Output: Tính tổng ký số
     let tongKySo = 0;
     tongKySo = so_hang_dv + so_hang_chuc;
-    console.log(tongKySo);
+    // console.log(tongKySo);
 
     //Hiển thị ra màn hình
     document.getElementById('tongKySo').innerHTML = `Tổng 2 ký số là : ${tongKySo.toLocaleString()}`;
